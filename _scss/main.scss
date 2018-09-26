@@ -1,0 +1,44 @@
+@import "utils/variables";
+@import "bootstrap/bootstrap";
+
+// Globals
+@import "globals/typography";
+
+// Elements
+@import "elements/buttons";
+
+// includes
+@import "includes/icons";
+
+// Global layout template
+@import "sections/footer";
+@import "sections/nav";
+
+// For developement
+// body * {
+//   background: rgba(10, 20, 30, 0.1);
+// }
+
+.no-gutter > [class*='col-'] {
+    padding-right:0;
+    padding-left:0;
+}
+
+
+
+
+.site {
+  display: flex;
+  height: 100%; // Fallback to avoid IE 10-11 `min-height` bug, `vh` is buggy in older mobile Safari
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.site-content {
+  flex: 1 0 auto; // prevent some browsers from letting items shrink smaller than default minimum size
+}
+
+.site-header,
+.site-footer {
+  flex: none; 
+}
