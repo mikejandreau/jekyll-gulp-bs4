@@ -5,12 +5,13 @@ title: Boilerplate
 
 <nav class="navbar navbar-expand-md navbar-light bg-light">
     <div class="container">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="#">Analytics Demo</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            {% comment %}
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
@@ -33,6 +34,8 @@ title: Boilerplate
                     <a class="nav-link disabled" href="#">Disabled</a>
                 </li>
             </ul>
+            {% endcomment %}
+
         </div>
     </div>
 </nav>
@@ -42,26 +45,44 @@ title: Boilerplate
 <header class="site-header">
     <div class="container">
         <div class="row">
-            <div class="col-sm-8">
-                <h1 class="text-xs-center">Web Boilerplate</h1>
+            <div class="col-sm-12">
+                <h1 class="mt-4 text-xs-center">Colby Libraries <small>(last 30 days)</small></h1>
             </div>
         </div>
     </div>
 </header>
 
-<section class="site-content">
+<section class="site-content mt-4">
     <div class="container">
+
         <div class="row">
-          <div class="col-sm-8">
-            <h2>Primary Content</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus id laboriosam libero, delectus commodi velit neque dignissimos culpa, optio debitis, provident necessitatibus. Incidunt, in hic autem neque quaerat quae. Voluptate.</p>
+            <div class="col-lg-8">
+                <div class="analytics-block">
+                    <h4>Sessions</h4>
+                    <div id="embed-api-auth-container"></div>
+                    <div id="chart-container"></div>
+                    <div class="sr-only" id="view-selector-container"></div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="analytics-block">
+                    <h4>Top Countries by session</h4>
+                    <div id="chart-1-container"></div>
+                    <div class="sr-only" id="view-selector-1-container"></div>
+                </div>
+            </div>
         </div>
-        <div class="col-sm-4">
-            <h3>Secondary Content</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam atque sit quasi quibusdam, asperiores rem, similique perspiciatis minus reiciendis autem, doloribus provident necessitatibus eius non inventore quidem animi ex repellendus.</p>
-        </div>
-    </div>
-</div>  
+
+
+
+
+
+
+
+
+
+
+    </div>  
 </section>
 
 <footer class="site-footer">

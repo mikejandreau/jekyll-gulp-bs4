@@ -319,7 +319,7 @@ template {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
-  font-family: "Georgia", "Times New Roman", "Garamond", serif;
+  font-family: "Mark OT", "Montserrat", "Open Sans", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
   font-weight: 500;
   line-height: 1.1;
   color: inherit; }
@@ -6134,7 +6134,7 @@ a.text-dark:focus, a.text-dark:hover {
   visibility: hidden !important; }
 
 body {
-  font-family: "Georgia", "Times New Roman", "Garamond", serif; }
+  font-family: "Mark OT", "Montserrat", "Open Sans", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif; }
 
 body {
   font-size: 16px; }
@@ -6151,11 +6151,8 @@ body {
   body {
     font-size: 15px; } }
 
-h1, h2, h3, h4 {
-  text-transform: uppercase; }
-
 .pull-quote {
-  font-family: "Georgia", "Times New Roman", "Garamond", serif;
+  font-family: "Mark OT", "Montserrat", "Open Sans", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
   color: #295E6F;
   font-size: 1.2rem;
   font-weight: 300; }
@@ -6164,7 +6161,7 @@ h1, h2, h3, h4 {
     color: #295E6F;
     font-weight: 700;
     text-transform: uppercase;
-    font-family: "Georgia", "Times New Roman", "Garamond", serif; }
+    font-family: "Mark OT", "Montserrat", "Open Sans", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif; }
 
 .btn {
   text-transform: uppercase;
@@ -6253,3 +6250,29 @@ a.logo {
 .site-footer {
   -ms-flex: none;
       flex: none; }
+
+.analytics-block {
+  border: 1px solid red;
+  overflow: hidden;
+  border-radius: 5px;
+  margin-bottom: 30px; }
+  .analytics-block h4 {
+    margin: 20px 20px 10px; }
+
+#embed-api-auth-container {
+  border: 1px solid orange;
+  margin: 0 20px; }
+
+.gapi-analytics-data-chart {
+  border: 1px solid green;
+  overflow: hidden;
+  padding: 0;
+  margin: 20px; }
+  .gapi-analytics-data-chart div div {
+    border: 1px solid tan;
+    overflow: hidden;
+    width: 100% !important; }
+  .gapi-analytics-data-chart svg {
+    border: 1px solid pink;
+    display: block;
+    width: 100% !important; }

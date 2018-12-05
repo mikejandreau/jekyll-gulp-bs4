@@ -42,3 +42,40 @@
 .site-footer {
   flex: none; 
 }
+
+.analytics-block {
+	// background: pink;
+	border: 1px solid red;
+	overflow: hidden;
+	border-radius: 5px;
+	margin-bottom: 30px;
+
+	h4 {
+		margin: 20px 20px 10px;
+	}
+
+}
+
+#embed-api-auth-container {
+	border: 1px solid orange;
+	margin: 0 20px;
+}
+
+.gapi-analytics-data-chart {
+	border: 1px solid green;
+	overflow: hidden;
+	padding: 0;
+	margin: 20px;
+
+	div div {
+		border: 1px solid tan;
+		overflow: hidden;
+		width: 100% !important;
+	}
+
+	svg { // look up how to scale this svg
+		border: 1px solid pink;
+		display: block;
+		width: 100% !important;
+	}
+}

@@ -24,9 +24,8 @@
     <link rel="apple-touch-icon" sizes="144x144" href="{{ "/img/favicons/apple-icon-144x144.png" | prepend: site.baseurl }}">
     <link rel="apple-touch-icon" sizes="152x152" href="{{ "/img/favicons/apple-icon-152x152.png" | prepend: site.baseurl }}">
     <link rel="apple-touch-icon" sizes="180x180" href="{{ "/img/favicons/apple-icon-180x180.png" | prepend: site.baseurl }}">
-    <link rel="icon" type="image/png" sizes="192x192"  href="{{ "/img/favicons/android-icon-192x192.png" | prepend: site.baseurl }}">
+    <link rel="icon" type="image/png" sizes="192x192"  href="{{ "/img/favicons/android-chrome-192x192.png" | prepend: site.baseurl }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ "/img/favicons/favicon-32x32.png" | prepend: site.baseurl }}">
-    <link rel="icon" type="image/png" sizes="96x96" href="{{ "/img/favicons/favicon-96x96.png" | prepend: site.baseurl }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ "/img/favicons/favicon-16x16.png" | prepend: site.baseurl }}">
     <link rel="manifest" href="{{ "/img/favicons/manifest.json" | prepend: site.baseurl }}">
     <meta name="msapplication-TileColor" content="#ffffff">
@@ -61,6 +60,140 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     
+
+
+
+
+
+
+
+
+<script>
+(function(w,d,s,g,js,fs){
+  g=w.gapi||(w.gapi={});g.analytics={q:[],ready:function(f){this.q.push(f);}};
+  js=d.createElement(s);fs=d.getElementsByTagName(s)[0];
+  js.src='https://apis.google.com/js/platform.js';
+  fs.parentNode.insertBefore(js,fs);js.onload=function(){g.load('analytics');};
+}(window,document,'script'));
+</script>
+
+
+
+<script>
+
+const clientID = '363740593001-nb1um6oe8ee4m49fm6fl20dgu9r9b3to.apps.googleusercontent.com';
+
+gapi.analytics.ready(function() {
+
+  /**
+   * Authorize the user immediately if the user has already granted access.
+   * If no access has been created, render an authorize button inside the
+   * element with the ID "embed-api-auth-container".
+   */
+  gapi.analytics.auth.authorize({
+    container: 'embed-api-auth-container',
+    clientid: clientID
+  });
+
+  // CLIENT ID: 363740593001-nb1um6oe8ee4m49fm6fl20dgu9r9b3to.apps.googleusercontent.com
+
+
+  // CLIENT SEC: qsMyu-3rcbLvtvtQJsDw-pfB
+
+
+  /**
+   * Create a new ViewSelector instance to be rendered inside of an
+   * element with the id "view-selector-container".
+   */
+  var viewSelector = new gapi.analytics.ViewSelector({
+    container: 'view-selector-container'
+  });
+
+  // Render the view selector to the page.
+  viewSelector.execute();
+
+
+  /**
+   * Create a new DataChart instance with the given query parameters
+   * and Google chart options. It will be rendered inside an element
+   * with the id "chart-container".
+   */
+  var dataChart = new gapi.analytics.googleCharts.DataChart({
+    query: {
+      metrics: 'ga:sessions',
+      dimensions: 'ga:date',
+      'start-date': '30daysAgo',
+      'end-date': 'yesterday'
+    },
+    chart: {
+      container: 'chart-container',
+      type: 'LINE',
+      options: {
+        width: '100%'
+      }
+    }
+  });
+
+
+  /**
+   * Render the dataChart on the page whenever a new view is selected.
+   */
+  viewSelector.on('change', function(ids) {
+    dataChart.set({query: {ids: ids}}).execute();
+  });
+
+
+
+
+
+
+
+  /**
+   * Create a ViewSelector for the first view to be rendered inside of an
+   * element with the id "view-selector-1-container".
+   */
+  var viewSelector1 = new gapi.analytics.ViewSelector({
+    container: 'view-selector-1-container'
+  });
+  
+  // Render both view selectors to the page.
+  viewSelector1.execute();
+  
+
+
+  /**
+   * Create the first DataChart for top countries over the past 30 days.
+   * It will be rendered inside an element with the id "chart-1-container".
+   */
+  var dataChart1 = new gapi.analytics.googleCharts.DataChart({
+    query: {
+      metrics: 'ga:sessions',
+      dimensions: 'ga:country',
+      'start-date': '30daysAgo',
+      'end-date': 'yesterday',
+      'max-results': 6,
+      sort: '-ga:sessions'
+    },
+    chart: {
+      container: 'chart-1-container',
+      type: 'PIE',
+      options: {
+        width: '100%',
+        pieHole: 4/9
+      }
+    }
+  });
+  
+  /**
+   * Update the first dataChart when the first view selecter is changed.
+   */
+  viewSelector1.on('change', function(ids) {
+    dataChart1.set({query: {ids: ids}}).execute();
+  });
+  
+});
+</script>
+
 
 
   </head>
